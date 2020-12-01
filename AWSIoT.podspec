@@ -8,9 +8,10 @@ Pod::Spec.new do |s|
   s.homepage     = 'http://aws.amazon.com/mobile/sdk'
   s.license      = 'Apache License, Version 2.0'
   s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
-  s.platform     = :ios, '9.0'
   s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
                      :tag => s.version}
+  s.ios.deployment_target = '10.0'
+  s.tvos.deployment_target = '10.0'
   s.requires_arc = true
   s.dependency 'AWSCore', '2.19.1'
   s.source_files = 'AWSIoT/*.{h,m}', 'AWSIoT/**/*.{h,m}'
